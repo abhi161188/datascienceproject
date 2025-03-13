@@ -35,7 +35,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         raise e
     
 @ensure_annotations
-def create_dictories(path_to_directories, list, verbose=True):
+def create_directories(path_to_directories: list, verbose=True):
     """Create list of dictories
     
     Args:
@@ -98,5 +98,4 @@ def load_bin(path: Path) -> any:
         Any: object stores in the file
     """
     data = joblib.load(path)
-    logger.info(f"binary file loaded from: {path}")
-    return data
+    logger.info(f"binary file loaded from:")
